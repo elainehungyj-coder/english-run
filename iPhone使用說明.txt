@@ -1,0 +1,7 @@
+使用方式：
+1. 用 iPhone 的 Safari 打開 GitHub Pages 網址。
+2. 點 Safari 的分享按鈕，選「加入主畫面」。
+3. 第一次打開後，點「匯入私人稿件」，選 Cynthia_private_script_data.json。
+4. 匯入後，稿件、熟悉/不熟悉記錄和生詞本只會存在手機本機。
+5. 離線時可以練稿、看中文意思、朗讀、查看已存生詞；第一次查新單詞的線上詞典解釋需要網路。
+6. GitHub 上只放公開工具，不要上傳 Cynthia_private_script_data.json。
