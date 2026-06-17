@@ -1,0 +1,11 @@
+{
+  "name": "English Run - Cynthia Meeting",
+  "short_name": "English Run",
+  "description": "Offline meeting script practice with Chinese meaning, read-aloud, word lookup, and vocabulary review.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbfaf7",
+  "theme_color": "#101820",
+  "orientation": "portrait"
+}
