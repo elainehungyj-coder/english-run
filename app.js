@@ -1,7 +1,7 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
 const SCRIPT_KEY = "english-run-script-v3-20260811";
-const APP_VERSION = "20260812layout";
+const APP_VERSION = "20260812audio";
 
 if (localStorage.getItem("english-run-app-version") !== APP_VERSION) {
   localStorage.setItem("english-run-app-version", APP_VERSION);
@@ -29,6 +29,7 @@ let phonetics = state.script.phonetics || {};
 let allItems = makeItems(groups);
 
 const $ = id => document.getElementById(id);
+let speechQueue = [];
 
 function loadJSON(key, fallback) {
   try {
@@ -195,16 +196,49 @@ function renderVocab() {
   `).join("") : `<div class="empty">還沒有生詞。</div>`;
 }
 
+function speechChunks(text) {
+  const clean = text
+    .replace(/\s+/g, " ")
+    .replace(/\s+—\s+/g, ". ")
+    .trim();
+  const sentences = clean.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [clean];
+  const chunks = [];
+  sentences.forEach(sentence => {
+    const part = sentence.trim();
+    if (!part) return;
+    if (part.length <= 170) {
+      chunks.push(part);
+      return;
+    }
+    part.split(/,\s+/).forEach(piece => {
+      const trimmed = piece.trim();
+      if (trimmed) chunks.push(trimmed);
+    });
+  });
+  return chunks;
+}
+
 function speak(text, lang = "en-US") {
   if (!("speechSynthesis" in window)) return;
   speechSynthesis.cancel();
-  const utter = new SpeechSynthesisUtterance(text);
-  utter.lang = lang;
-  utter.rate = 0.86;
   const voices = speechSynthesis.getVoices();
   const voice = voices.find(v => v.lang === lang && /Samantha|Ava|Daniel|Alex|Google US English/i.test(v.name)) || voices.find(v => v.lang.startsWith("en"));
-  if (voice) utter.voice = voice;
-  speechSynthesis.speak(utter);
+  speechQueue = speechChunks(text);
+
+  const speakNext = () => {
+    const chunk = speechQueue.shift();
+    if (!chunk) return;
+    const utter = new SpeechSynthesisUtterance(chunk);
+    utter.lang = lang;
+    utter.rate = 0.86;
+    if (voice) utter.voice = voice;
+    utter.onend = speakNext;
+    utter.onerror = speakNext;
+    speechSynthesis.speak(utter);
+    speechSynthesis.resume();
+  };
+
+  speakNext();
 }
 
 async function lookupWord(word) {
