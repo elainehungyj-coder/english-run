@@ -462,9 +462,16 @@ window.PRACTICE_DATA = {
           "id": "w087",
           "en": "ultimately — Through sensory experiences such as touch, we can explore the connection with oxytocin release, while scent can be linked to serotonin and emotional well-being. We would like to show how these sensory experiences connect the product, mind, and body, ultimately leading back to the mindfulness concept in Shunbin’s proposal. It would be helpful to visualize this process as a simple cycle.",
           "zh": "ultimately：最終；最後"
+        },
+        {
+          "id": "w088",
+          "en": "scalp — Usable on hair, face, scalp, and the whole body, with a subtle, lasting scent. A refined item that gives confidence simply by being carried and earns compliments from others.",
+          "zh": "scalp /skælp/：頭皮。可用於頭髮、臉部、頭皮和全身，帶有細膩且持久的香氣。這是一款精緻的單品，只要隨身攜帶就能帶來自信，並贏得他人的稱讚。"
         }
       ]
     }
   ],
-  "phonetics": {}
+  "phonetics": {
+    "scalp": "/skælp/"
+  }
 };
