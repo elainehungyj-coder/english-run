@@ -1,7 +1,7 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
-const SCRIPT_KEY = "english-run-script-v4-20260813";
-const APP_VERSION = "20260813scalp";
+const SCRIPT_KEY = "english-run-script-v5-20260814";
+const APP_VERSION = "20260814progress";
 
 if (localStorage.getItem("english-run-app-version") !== APP_VERSION) {
   localStorage.setItem("english-run-app-version", APP_VERSION);
@@ -118,6 +118,30 @@ function activeItem() {
   return allItems.find(item => item.id === state.activeItemId) || currentItem();
 }
 
+function itemTerm(item) {
+  return item?.en.split(" — ", 1)[0]?.trim() || "";
+}
+
+function itemDefinition(item) {
+  const zh = item?.zh || "";
+  const marker = zh.indexOf("：");
+  return marker >= 0 ? zh.slice(marker + 1).trim() : zh;
+}
+
+function showItemLookup(item) {
+  const word = itemTerm(item);
+  if (!word) return;
+  const key = cleanWord(word);
+  state.currentWord = key || word;
+  state.currentLookup = {
+    word,
+    phonetic: phonetics[word] || phonetics[key] || "",
+    definition: itemDefinition(item),
+    audio: ""
+  };
+  renderLookup(state.currentLookup);
+}
+
 function renderGroups() {
   const list = $("groupList");
   if (!allItems.length) {
@@ -154,6 +178,7 @@ function renderCard() {
     return;
   }
   const items = filteredItems();
+  const previousActiveId = state.activeItemId;
   const item = currentItem();
   state.activeItemId = item ? item.id : null;
   const group = state.groupId === "all" ? "All groups" : groups.find(g => g.id === state.groupId)?.title || "Group";
@@ -170,6 +195,7 @@ function renderCard() {
   $("sentenceText").innerHTML = tokenize(item.en);
   $("chineseText").textContent = item.zh;
   $("chineseText").hidden = !state.showChinese;
+  if (previousActiveId !== item.id) showItemLookup(item);
   setStatus(item.id, { seen: (getStatus(item.id).seen || 0) + 1 });
   renderQueue(items, item);
   renderStats();
@@ -276,20 +302,34 @@ function renderLookup(result) {
   $("definition").textContent = result.definition || "No definition found";
 }
 
+function nextVisibleItemId(markedId) {
+  const items = filteredItems();
+  const currentIndex = items.findIndex(item => item.id === markedId);
+  return (items[currentIndex + 1] || items[0] || null)?.id || null;
+}
+
+function moveToItem(itemId) {
+  const after = filteredItems();
+  const nextIndex = itemId ? after.findIndex(item => item.id === itemId) : -1;
+  state.index = nextIndex >= 0 ? nextIndex : 0;
+}
+
 function markKnown() {
   const item = activeItem();
   if (!item) return;
+  const nextId = nextVisibleItemId(item.id);
   setStatus(item.id, { status: "known" });
-  state.index = 0;
+  moveToItem(nextId);
   renderAll();
 }
 
 function markAgain() {
   const item = activeItem();
   if (!item) return;
+  const nextId = nextVisibleItemId(item.id);
   const s = getStatus(item.id);
   setStatus(item.id, { status: "repeat", misses: (s.misses || 0) + 1 });
-  state.index = 0;
+  moveToItem(nextId);
   renderAll();
 }
 

@@ -467,6 +467,11 @@ window.PRACTICE_DATA = {
           "id": "w088",
           "en": "scalp — Usable on hair, face, scalp, and the whole body, with a subtle, lasting scent. A refined item that gives confidence simply by being carried and earns compliments from others.",
           "zh": "scalp /skælp/：頭皮。可用於頭髮、臉部、頭皮和全身，帶有細膩且持久的香氣。這是一款精緻的單品，只要隨身攜帶就能帶來自信，並贏得他人的稱讚。"
+        },
+        {
+          "id": "w089",
+          "en": "scalp — Shunbin’s brand concept says the upgraded product can be used on the body, hair, face, scalp, and other areas. Could Logic please confirm whether the product was designed based on this requirement?",
+          "zh": "scalp /skælp/：頭皮。Shunbin 的品牌概念提到升級產品可以用於身體、頭髮、臉部、頭皮和其他部位。請 Logic 確認產品是否是根據這個需求進行設計的。"
         }
       ]
     }
