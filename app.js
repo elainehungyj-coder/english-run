@@ -1,7 +1,7 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
-const SCRIPT_KEY = "english-run-script-v5-20260814";
-const APP_VERSION = "20260814progress";
+const SCRIPT_KEY = "english-run-script-v6-20260814";
+const APP_VERSION = "20260814cotton";
 
 if (localStorage.getItem("english-run-app-version") !== APP_VERSION) {
   localStorage.setItem("english-run-app-version", APP_VERSION);

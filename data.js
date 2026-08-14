@@ -472,11 +472,17 @@ window.PRACTICE_DATA = {
           "id": "w089",
           "en": "scalp — Shunbin’s brand concept says the upgraded product can be used on the body, hair, face, scalp, and other areas. Could Logic please confirm whether the product was designed based on this requirement?",
           "zh": "scalp /skælp/：頭皮。Shunbin 的品牌概念提到升級產品可以用於身體、頭髮、臉部、頭皮和其他部位。請 Logic 確認產品是否是根據這個需求進行設計的。"
+        },
+        {
+          "id": "w090",
+          "en": "cotton — Could you please confirm whether “④ ハイビスカスエキス” in the proposal refers to Chinese hibiscus, roselle, or cotton rose?",
+          "zh": "cotton /ˈkɑːtən/：棉；棉花。此句中出現在 cotton rose（木芙蓉）這個植物名稱裡。"
         }
       ]
     }
   ],
   "phonetics": {
-    "scalp": "/skælp/"
+    "scalp": "/skælp/",
+    "cotton": "/ˈkɑːtən/"
   }
 };
