@@ -477,12 +477,18 @@ window.PRACTICE_DATA = {
           "id": "w090",
           "en": "cotton — Could you please confirm whether “④ ハイビスカスエキス” in the proposal refers to Chinese hibiscus, roselle, or cotton rose?",
           "zh": "cotton /ˈkɑːtən/：棉；棉花。此句中出現在 cotton rose（木芙蓉）這個植物名稱裡。"
+        },
+        {
+          "id": "w091",
+          "en": "reiterate — We would like to reiterate our hope that, with the continued support and full efforts of both Shunbin and Logic, we can work together to complete and launch the upgraded product as early as possible.",
+          "zh": "reiterate /riˈɪtəreɪt/：重申；再次強調。"
         }
       ]
     }
   ],
   "phonetics": {
     "scalp": "/skælp/",
-    "cotton": "/ˈkɑːtən/"
+    "cotton": "/ˈkɑːtən/",
+    "reiterate": "/riˈɪtəreɪt/"
   }
 };
