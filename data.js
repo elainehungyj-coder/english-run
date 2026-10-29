@@ -482,6 +482,11 @@ window.PRACTICE_DATA = {
           "id": "w091",
           "en": "reiterate — We would like to reiterate our hope that, with the continued support and full efforts of both Shunbin and Logic, we can work together to complete and launch the upgraded product as early as possible.",
           "zh": "reiterate /riˈɪtəreɪt/：重申；再次強調。"
+        },
+        {
+          "id": "w092",
+          "en": "proactive — We also sincerely appreciate Shunbin’s proactive and careful coordination.",
+          "zh": "proactive /proʊˈæktɪv/：主動積極的；積極主動地採取行動的。"
         }
       ]
     }
@@ -489,6 +494,7 @@ window.PRACTICE_DATA = {
   "phonetics": {
     "scalp": "/skælp/",
     "cotton": "/ˈkɑːtən/",
-    "reiterate": "/riˈɪtəreɪt/"
+    "reiterate": "/riˈɪtəreɪt/",
+    "proactive": "/proʊˈæktɪv/"
   }
 };
