@@ -1,10 +1,10 @@
-const CACHE_NAME = "english-run-public-shell-v13-20261029";
+const CACHE_NAME = "english-run-public-shell-v14-20261031";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./app.js?v=20261029proactive",
-  "./data.js?v=20261029proactive",
+  "./app.js?v=20261031panel",
+  "./data.js?v=20261031panel",
   "./manifest.json",
   "./iPhone使用說明.txt"
 ];

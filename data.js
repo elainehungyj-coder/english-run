@@ -487,6 +487,11 @@ window.PRACTICE_DATA = {
           "id": "w092",
           "en": "proactive — We also sincerely appreciate Shunbin’s proactive and careful coordination.",
           "zh": "proactive /proʊˈæktɪv/：主動積極的；積極主動地採取行動的。"
+        },
+        {
+          "id": "w093",
+          "en": "panel — A label may consist of more than one panel. It may consist of a front panel, side panels and a back panel. Back and side panels are generally called information panels.",
+          "zh": "panel /ˈpænəl/：面板；（標籤或包裝的）版面。"
         }
       ]
     }
@@ -495,6 +500,7 @@ window.PRACTICE_DATA = {
     "scalp": "/skælp/",
     "cotton": "/ˈkɑːtən/",
     "reiterate": "/riˈɪtəreɪt/",
-    "proactive": "/proʊˈæktɪv/"
+    "proactive": "/proʊˈæktɪv/",
+    "panel": "/ˈpænəl/"
   }
 };
