@@ -492,6 +492,21 @@ window.PRACTICE_DATA = {
           "id": "w093",
           "en": "panel — A label may consist of more than one panel. It may consist of a front panel, side panels and a back panel. Back and side panels are generally called information panels.",
           "zh": "panel /ˈpænəl/：面板；（標籤或包裝的）版面。"
+        },
+        {
+          "id": "w094",
+          "en": "capacity — What are the capacities, in kilograms, of the production tanks for MIST and LOTION?",
+          "zh": "capacity /kəˈpæsəti/：容量；產能。"
+        },
+        {
+          "id": "w095",
+          "en": "preliminary — Could Logic and Shunbin jointly provide a preliminary estimate of the total per-bottle cost, including both production and the container and packaging?",
+          "zh": "preliminary /prɪˈlɪməneri/：初步的；初期的。"
+        },
+        {
+          "id": "w096",
+          "en": "estimate — Could Logic and Shunbin jointly provide a preliminary estimate of the total per-bottle cost, including both production and the container and packaging?",
+          "zh": "estimate /ˈestəmət/：估算；估計。"
         }
       ]
     }
@@ -501,6 +516,9 @@ window.PRACTICE_DATA = {
     "cotton": "/ˈkɑːtən/",
     "reiterate": "/riˈɪtəreɪt/",
     "proactive": "/proʊˈæktɪv/",
-    "panel": "/ˈpænəl/"
+    "panel": "/ˈpænəl/",
+    "capacity": "/kəˈpæsəti/",
+    "preliminary": "/prɪˈlɪməneri/",
+    "estimate": "/ˈestəmət/"
   }
 };
