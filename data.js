@@ -507,6 +507,61 @@ window.PRACTICE_DATA = {
           "id": "w096",
           "en": "estimate — Could Logic and Shunbin jointly provide a preliminary estimate of the total per-bottle cost, including both production and the container and packaging?",
           "zh": "estimate /ˈestəmət/：估算；估計。"
+        },
+        {
+          "id": "w097",
+          "en": "brick-and-mortar — We will need several ways for customers to buy: an online store; mail-order sales, where customers can call to place an order after seeing an advertisement or online information; select shops; and brick-and-mortar stores.",
+          "zh": "brick-and-mortar /ˌbrɪk ən ˈmɔːrtər/：實體店面；線下店鋪。"
+        },
+        {
+          "id": "w098",
+          "en": "thorough — Once all the ingredients are mixed, we need to make sure the formula goes through thorough stability testing.",
+          "zh": "thorough /ˈθɜːroʊ/：徹底的；全面的。"
+        },
+        {
+          "id": "w099",
+          "en": "milliliter — Assuming a 50-milliliter bottle for both the mist and the lotion, what would the MOQ be for each?",
+          "zh": "milliliter /ˈmɪləˌliːtər/：毫升。"
+        },
+        {
+          "id": "w100",
+          "en": "interval — If the interval between batches is too long, we are concerned that it may affect continuous sales in the market.",
+          "zh": "interval /ˈɪntərvəl/：間隔；期間。"
+        },
+        {
+          "id": "w101",
+          "en": "expiry — What expiry date can be printed on the packaging for the two upgraded products?",
+          "zh": "expiry /ɪkˈspaɪəri/：到期；有效期限。"
+        },
+        {
+          "id": "w102",
+          "en": "kilogram — What are the tank sizes, in kilograms, at the partner factory for making the mist and lotion?",
+          "zh": "kilogram /ˈkɪləɡræm/：公斤。"
+        },
+        {
+          "id": "w103",
+          "en": "Minimum Order Quantity (MOQ) — Assuming a 50-milliliter bottle for both the mist and the lotion, what would the MOQ (Minimum Order Quantity) be for each?",
+          "zh": "Minimum Order Quantity (MOQ) /ˌmɪnɪməm ˈɔːrdər kwɑːntəti/：最低訂購量。"
+        },
+        {
+          "id": "w104",
+          "en": "estimate — What is the estimated cost at this stage, including manufacturing, packaging, and containers? Could you please provide a cost breakdown?",
+          "zh": "estimate /ˈestəmət/：估算；估計。"
+        },
+        {
+          "id": "w105",
+          "en": "batch — After one batch has been produced and delivered, what is the shortest time needed to take orders, produce, and deliver the next batch?",
+          "zh": "batch /bætʃ/：一批；批次。"
+        },
+        {
+          "id": "w106",
+          "en": "benchmark — For the upgraded product, we will use the retail prices of the two SHIRO benchmark products as our pricing reference.",
+          "zh": "benchmark /ˈbentʃmɑːrk/：基準；標竿產品。"
+        },
+        {
+          "id": "w107",
+          "en": "specialist — If needed, this can be supported by a specialist call center whose staff can provide customer service for the products of 10 to 20 different companies.",
+          "zh": "specialist /ˈspeʃəlɪst/：專家；專業人員。"
         }
       ]
     }
@@ -519,6 +574,16 @@ window.PRACTICE_DATA = {
     "panel": "/ˈpænəl/",
     "capacity": "/kəˈpæsəti/",
     "preliminary": "/prɪˈlɪməneri/",
-    "estimate": "/ˈestəmət/"
+    "estimate": "/ˈestəmət/",
+    "brick-and-mortar": "/ˌbrɪk ən ˈmɔːrtər/",
+    "thorough": "/ˈθɜːroʊ/",
+    "milliliter": "/ˈmɪləˌliːtər/",
+    "interval": "/ˈɪntərvəl/",
+    "expiry": "/ɪkˈspaɪəri/",
+    "kilogram": "/ˈkɪləɡræm/",
+    "minimum order quantity (moq)": "/ˌmɪnɪməm ˈɔːrdər kwɑːntəti/",
+    "batch": "/bætʃ/",
+    "benchmark": "/ˈbentʃmɑːrk/",
+    "specialist": "/ˈspeʃəlɪst/"
   }
 };
