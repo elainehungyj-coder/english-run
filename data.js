@@ -562,6 +562,11 @@ window.PRACTICE_DATA = {
           "id": "w107",
           "en": "specialist — If needed, this can be supported by a specialist call center whose staff can provide customer service for the products of 10 to 20 different companies.",
           "zh": "specialist /ˈspeʃəlɪst/：專家；專業人員。"
+        },
+        {
+          "id": "w108",
+          "en": "monogram — In line with your feedback, we are moving forward with revising our proposals for the outer box design, bottle design, and typography layout, as well as developing new concepts for the brand logo (monogram/symbol mark).",
+          "zh": "monogram /ˈmɒnəɡræm/：字母組合標誌；由一個或多個字母構成的品牌標記。"
         }
       ]
     }
@@ -584,6 +589,7 @@ window.PRACTICE_DATA = {
     "minimum order quantity (moq)": "/ˌmɪnɪməm ˈɔːrdər kwɑːntəti/",
     "batch": "/bætʃ/",
     "benchmark": "/ˈbentʃmɑːrk/",
-    "specialist": "/ˈspeʃəlɪst/"
+    "specialist": "/ˈspeʃəlɪst/",
+    "monogram": "/ˈmɒnəɡræm/"
   }
 };
