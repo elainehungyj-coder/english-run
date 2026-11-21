@@ -1,17 +1,37 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
 const SCRIPT_KEY = "english-run-script-v7-20261029";
-const APP_VERSION = "20261124humanvoice";
+const APP_VERSION = "20261124alljessica";
 const SHADOWING_AUDIO_BASE = "https://elainehungyj-coder.github.io/elaine-shadowing-studio/";
 const HUMAN_AUDIO = {
+  w092: "audio/jessica-20261124/w092.mp3",
+  w093: "audio/jessica-20261124/w093.mp3",
+  w094: "audio/jessica-20261124/w094.mp3",
+  w095: "audio/jessica-20261124/w095.mp3",
+  w096: "audio/jessica-20261124/w095.mp3",
   w097: "courses/shunbin-2026-11-24/audio/revised-20261119/025.mp3",
   w098: "courses/shunbin-2026-11-24/audio/revised-20261119/002.mp3",
+  w099: "audio/jessica-20261124/w099.mp3",
   w100: "courses/shunbin-2026-11-24/audio/revised-20261119/013.mp3",
   w101: "courses/shunbin-2026-11-24/audio/revised-20261119/007.mp3",
   w102: "courses/shunbin-2026-11-24/audio/revised-20261119/008.mp3",
   w103: "courses/shunbin-2026-11-24/audio/revised-20261119/009.mp3",
   w104: "courses/shunbin-2026-11-24/audio/revised-20261119/010.mp3",
-  w105: "courses/shunbin-2026-11-24/audio/revised-20261119/011.mp3"
+  w105: "courses/shunbin-2026-11-24/audio/revised-20261119/011.mp3",
+  w106: "audio/jessica-20261124/w106.mp3",
+  w107: "audio/jessica-20261124/w107.mp3",
+  w108: "audio/jessica-20261124/w108.mp3",
+  w109: "audio/jessica-20261124/w109.mp3",
+  w110: "audio/jessica-20261124/w109.mp3",
+  w111: "audio/jessica-20261124/w111.mp3",
+  w112: "audio/jessica-20261124/w112.mp3",
+  w113: "audio/jessica-20261124/w113.mp3",
+  w114: "audio/jessica-20261124/w114.mp3",
+  w115: "audio/jessica-20261124/w115.mp3",
+  w116: "audio/jessica-20261124/w116.mp3",
+  w117: "audio/jessica-20261124/w117.mp3",
+  w118: "audio/jessica-20261124/w118.mp3",
+  w119: "audio/jessica-20261124/w119.mp3"
 };
 
 if (localStorage.getItem("english-run-app-version") !== APP_VERSION) {
@@ -122,7 +142,7 @@ function filteredItems() {
     if (repeatA !== repeatB) return repeatB - repeatA;
     if ((sa.misses || 0) !== (sb.misses || 0)) return (sb.misses || 0) - (sa.misses || 0);
     return (shuffleRanks.get(a.id) || 0) - (shuffleRanks.get(b.id) || 0);
-  });
+});
 }
 
 function currentItem() {
@@ -300,7 +320,10 @@ function playItemAudio(item) {
     humanAudioPlayer.pause();
     humanAudioPlayer.currentTime = 0;
   }
-  humanAudioPlayer = new Audio(`${SHADOWING_AUDIO_BASE}${humanAudioPath}`);
+  const humanAudioUrl = humanAudioPath.startsWith("audio/")
+    ? humanAudioPath
+    : `${SHADOWING_AUDIO_BASE}${humanAudioPath}`;
+  humanAudioPlayer = new Audio(humanAudioUrl);
   humanAudioPlayer.play().catch(() => speak(item.en));
 }
 

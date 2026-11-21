@@ -1,12 +1,30 @@
-const CACHE_NAME = "english-run-public-shell-v21-20261124";
+const CACHE_NAME = "english-run-public-shell-v22-20261124";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./app.js?v=20261124humanvoice",
-  "./data.js?v=20261124humanvoice",
+  "./app.js?v=20261124alljessica",
+  "./data.js?v=20261124alljessica",
   "./manifest.json",
-  "./iPhone使用說明.txt"
+  "./iPhone使用說明.txt",
+  "./audio/jessica-20261124/w092.mp3",
+  "./audio/jessica-20261124/w093.mp3",
+  "./audio/jessica-20261124/w094.mp3",
+  "./audio/jessica-20261124/w095.mp3",
+  "./audio/jessica-20261124/w099.mp3",
+  "./audio/jessica-20261124/w106.mp3",
+  "./audio/jessica-20261124/w107.mp3",
+  "./audio/jessica-20261124/w108.mp3",
+  "./audio/jessica-20261124/w109.mp3",
+  "./audio/jessica-20261124/w111.mp3",
+  "./audio/jessica-20261124/w112.mp3",
+  "./audio/jessica-20261124/w113.mp3",
+  "./audio/jessica-20261124/w114.mp3",
+  "./audio/jessica-20261124/w115.mp3",
+  "./audio/jessica-20261124/w116.mp3",
+  "./audio/jessica-20261124/w117.mp3",
+  "./audio/jessica-20261124/w118.mp3",
+  "./audio/jessica-20261124/w119.mp3"
 ];
 
 self.addEventListener("install", event => {
@@ -16,7 +34,6 @@ self.addEventListener("install", event => {
       .then(() => self.skipWaiting())
   );
 });
-
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys()
@@ -24,7 +41,6 @@ self.addEventListener("activate", event => {
       .then(() => self.clients.claim())
   );
 });
-
 self.addEventListener("fetch", event => {
   const requestUrl = new URL(event.request.url);
   if (requestUrl.origin !== self.location.origin) return;
