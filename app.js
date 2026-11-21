@@ -1,7 +1,7 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
 const SCRIPT_KEY = "english-run-script-v7-20261029";
-const APP_VERSION = "20261121nda";
+const APP_VERSION = "20261124meeting";
 
 if (localStorage.getItem("english-run-app-version") !== APP_VERSION) {
   localStorage.setItem("english-run-app-version", APP_VERSION);
@@ -27,6 +27,8 @@ const state = {
 let groups = state.script.groups || [];
 let phonetics = state.script.phonetics || {};
 let allItems = makeItems(groups);
+let shuffleRanks = new Map();
+reshuffleItems();
 
 const $ = id => document.getElementById(id);
 let speechQueue = [];
@@ -52,6 +54,7 @@ function saveScript(script) {
   groups = script.groups || [];
   phonetics = script.phonetics || {};
   allItems = makeItems(groups);
+  reshuffleItems();
   state.groupId = "all";
   state.index = 0;
   localStorage.setItem(SCRIPT_KEY, JSON.stringify(script));
@@ -60,6 +63,10 @@ function saveScript(script) {
 function makeItems(sourceGroups) {
   let order = 0;
   return sourceGroups.flatMap(group => group.items.map(item => ({ ...item, order: order++, groupId: group.id, groupTitle: group.title })));
+}
+
+function reshuffleItems() {
+  shuffleRanks = new Map(allItems.map(item => [item.id, Math.random()]));
 }
 
 function getStatus(id) {
@@ -102,7 +109,7 @@ function filteredItems() {
     const repeatB = sb.status === "repeat" ? 1 : 0;
     if (repeatA !== repeatB) return repeatB - repeatA;
     if ((sa.misses || 0) !== (sb.misses || 0)) return (sb.misses || 0) - (sa.misses || 0);
-    return a.order - b.order;
+    return (shuffleRanks.get(a.id) || 0) - (shuffleRanks.get(b.id) || 0);
   });
 }
 
@@ -370,6 +377,7 @@ function bindEvents() {
     if (!btn) return;
     state.groupId = btn.dataset.group;
     state.index = 0;
+    reshuffleItems();
     renderAll();
   });
   $("queueList").addEventListener("click", event => {

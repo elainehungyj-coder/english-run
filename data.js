@@ -482,7 +482,13 @@ window.PRACTICE_DATA = {
           "id": "w091",
           "en": "reiterate — We would like to reiterate our hope that, with the continued support and full efforts of both Shunbin and Logic, we can work together to complete and launch the upgraded product as early as possible.",
           "zh": "reiterate /riˈɪtəreɪt/：重申；再次強調。"
-        },
+        }
+      ]
+    },
+    {
+      "id": "g6",
+      "title": "11/24meeting 1",
+      "items": [
         {
           "id": "w092",
           "en": "proactive — We also sincerely appreciate Shunbin’s proactive and careful coordination.",
@@ -582,7 +588,13 @@ window.PRACTICE_DATA = {
           "id": "w111",
           "en": "definition — We added more items to the definition of confidential information.",
           "zh": "definition /ˌdefɪˈnɪʃən/：定義；界定。"
-        },
+        }
+      ]
+    },
+    {
+      "id": "g7",
+      "title": "11/24meeting 2",
+      "items": [
         {
           "id": "w112",
           "en": "authority — In the final version, disclosure is already very limited. It is only allowed when it is needed for this project, and only for overseas distributors, government authorities, or other relevant people.",
