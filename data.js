@@ -617,6 +617,11 @@ window.PRACTICE_DATA = {
           "id": "w118",
           "en": "confidentiality — Permanent confidentiality helps both sides feel more comfortable sharing information openly.",
           "zh": "confidentiality /ˌkɒnfɪˌdenʃiˈæləti/：保密；機密性。"
+        },
+        {
+          "id": "w119",
+          "en": "Non-Disclosure Agreement (NDA) — Thank you for taking the time to look at the NDA (Non-Disclosure Agreement) with us.",
+          "zh": "Non-Disclosure Agreement (NDA) /ˌnɑːn dɪˈskloʊʒər əˈɡriːmənt/：保密協議。"
         }
       ]
     }
@@ -650,6 +655,7 @@ window.PRACTICE_DATA = {
     "neutral": "/ˈnuːtrəl/",
     "consumed": "/kənˈsuːmd/",
     "accurate": "/ˈækjərət/",
-    "confidentiality": "/ˌkɒnfɪˌdenʃiˈæləti/"
+    "confidentiality": "/ˌkɒnfɪˌdenʃiˈæləti/",
+    "non-disclosure agreement (nda)": "/ˌnɑːn dɪˈskloʊʒər əˈɡriːmənt/"
   }
 };
