@@ -567,6 +567,56 @@ window.PRACTICE_DATA = {
           "id": "w108",
           "en": "monogram — In line with your feedback, we are moving forward with revising our proposals for the outer box design, bottle design, and typography layout, as well as developing new concepts for the brand logo (monogram/symbol mark).",
           "zh": "monogram /ˈmɒnəɡræm/：字母組合標誌；由一個或多個字母構成的品牌標記。"
+        },
+        {
+          "id": "w109",
+          "en": "specified — The final version already limits disclosure to specified recipients and to situations where disclosure is necessary for the purpose of the Agreement.",
+          "zh": "specified /ˈspesɪfaɪd/：指定的；明確列出的。"
+        },
+        {
+          "id": "w110",
+          "en": "recipient — The final version already limits disclosure to specified recipients and to situations where disclosure is necessary for the purpose of the Agreement.",
+          "zh": "recipient /rɪˈsɪpiənt/：接收人；收件人。"
+        },
+        {
+          "id": "w111",
+          "en": "definition — We added more items to the definition of confidential information.",
+          "zh": "definition /ˌdefɪˈnɪʃən/：定義；界定。"
+        },
+        {
+          "id": "w112",
+          "en": "authority — In the final version, disclosure is already very limited. It is only allowed when it is needed for this project, and only for overseas distributors, government authorities, or other relevant people.",
+          "zh": "authority /əˈθɔːrəti/：主管機關；政府機構。"
+        },
+        {
+          "id": "w113",
+          "en": "clause — The purpose of this revision to this clause is to protect our brand and products, and to avoid any copying, manufacturing, or sale of the products without both sides' agreement.",
+          "zh": "clause /klɔːz/：條款。"
+        },
+        {
+          "id": "w114",
+          "en": "intellectual — We feel that saying all intellectual property belongs to only one side may not be fair.",
+          "zh": "intellectual /ˌɪntəˈlektʃuəl/：智力的；知識產權相關的。"
+        },
+        {
+          "id": "w115",
+          "en": "neutral — We think this is a fair and neutral way to respect both sides.",
+          "zh": "neutral /ˈnuːtrəl/：中立的；不偏不倚的。"
+        },
+        {
+          "id": "w116",
+          "en": "consumed — Some samples from Logic may already be used or consumed during the cooperation.",
+          "zh": "consumed /kənˈsuːmd/：已使用；已耗用。"
+        },
+        {
+          "id": "w117",
+          "en": "accurate — We think this is more practical and more accurate, while the samples and information still need to be handled properly.",
+          "zh": "accurate /ˈækjərət/：準確的；精確的。"
+        },
+        {
+          "id": "w118",
+          "en": "confidentiality — Permanent confidentiality helps both sides feel more comfortable sharing information openly.",
+          "zh": "confidentiality /ˌkɒnfɪˌdenʃiˈæləti/：保密；機密性。"
         }
       ]
     }
@@ -590,6 +640,16 @@ window.PRACTICE_DATA = {
     "batch": "/bætʃ/",
     "benchmark": "/ˈbentʃmɑːrk/",
     "specialist": "/ˈspeʃəlɪst/",
-    "monogram": "/ˈmɒnəɡræm/"
+    "monogram": "/ˈmɒnəɡræm/",
+    "specified": "/ˈspesɪfaɪd/",
+    "recipient": "/rɪˈsɪpiənt/",
+    "definition": "/ˌdefɪˈnɪʃən/",
+    "authority": "/əˈθɔːrəti/",
+    "clause": "/klɔːz/",
+    "intellectual": "/ˌɪntəˈlektʃuəl/",
+    "neutral": "/ˈnuːtrəl/",
+    "consumed": "/kənˈsuːmd/",
+    "accurate": "/ˈækjərət/",
+    "confidentiality": "/ˌkɒnfɪˌdenʃiˈæləti/"
   }
 };
