@@ -1,7 +1,18 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
 const SCRIPT_KEY = "english-run-script-v7-20261029";
-const APP_VERSION = "20261124meeting";
+const APP_VERSION = "20261124humanvoice";
+const SHADOWING_AUDIO_BASE = "https://elainehungyj-coder.github.io/elaine-shadowing-studio/";
+const HUMAN_AUDIO = {
+  w097: "courses/shunbin-2026-11-24/audio/revised-20261119/025.mp3",
+  w098: "courses/shunbin-2026-11-24/audio/revised-20261119/002.mp3",
+  w100: "courses/shunbin-2026-11-24/audio/revised-20261119/013.mp3",
+  w101: "courses/shunbin-2026-11-24/audio/revised-20261119/007.mp3",
+  w102: "courses/shunbin-2026-11-24/audio/revised-20261119/008.mp3",
+  w103: "courses/shunbin-2026-11-24/audio/revised-20261119/009.mp3",
+  w104: "courses/shunbin-2026-11-24/audio/revised-20261119/010.mp3",
+  w105: "courses/shunbin-2026-11-24/audio/revised-20261119/011.mp3"
+};
 
 if (localStorage.getItem("english-run-app-version") !== APP_VERSION) {
   localStorage.setItem("english-run-app-version", APP_VERSION);
@@ -28,6 +39,7 @@ let groups = state.script.groups || [];
 let phonetics = state.script.phonetics || {};
 let allItems = makeItems(groups);
 let shuffleRanks = new Map();
+let humanAudioPlayer = null;
 reshuffleItems();
 
 const $ = id => document.getElementById(id);
@@ -199,6 +211,8 @@ function renderCard() {
     return;
   }
 
+  $("speakBtn").textContent = HUMAN_AUDIO[item.id] ? "播放 Jessica 原聲" : "朗讀（系統語音）";
+
   $("sentenceText").innerHTML = tokenize(item.en);
   $("chineseText").textContent = item.zh;
   $("chineseText").hidden = !state.showChinese;
@@ -272,6 +286,22 @@ function speak(text, lang = "en-US") {
   };
 
   speakNext();
+}
+
+function playItemAudio(item) {
+  const humanAudioPath = HUMAN_AUDIO[item.id];
+  if (!humanAudioPath) {
+    speak(item.en);
+    return;
+  }
+
+  speechSynthesis.cancel();
+  if (humanAudioPlayer) {
+    humanAudioPlayer.pause();
+    humanAudioPlayer.currentTime = 0;
+  }
+  humanAudioPlayer = new Audio(`${SHADOWING_AUDIO_BASE}${humanAudioPath}`);
+  humanAudioPlayer.play().catch(() => speak(item.en));
 }
 
 async function lookupWord(word) {
@@ -394,7 +424,7 @@ function bindEvents() {
   });
   $("speakBtn").addEventListener("click", () => {
     const item = activeItem();
-    if (item) speak(item.en);
+    if (item) playItemAudio(item);
   });
   $("speakWord").addEventListener("click", () => {
     const word = state.currentLookup?.word || state.currentWord;
