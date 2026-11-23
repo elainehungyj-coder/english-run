@@ -1,7 +1,7 @@
 const STORAGE_KEY = "english-run-progress-v1";
 const VOCAB_KEY = "english-run-vocab-v1";
 const SCRIPT_KEY = "english-run-script-v7-20261029";
-const APP_VERSION = "20261124alljessica";
+const APP_VERSION = "20261123campaign";
 const SHADOWING_AUDIO_BASE = "https://elainehungyj-coder.github.io/elaine-shadowing-studio/";
 const HUMAN_AUDIO = {
   w092: "audio/jessica-20261124/w092.mp3",

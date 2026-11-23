@@ -616,6 +616,11 @@ window.PRACTICE_DATA = {
           "zh": "neutral /ˈnuːtrəl/：中立的；不偏不倚的。"
         },
         {
+          "id": "w120",
+          "en": "campaign — I picked “Tradition, Reimagined” for the “campaign tagline”.",
+          "zh": "campaign /kæmˈpeɪn/：行銷活動；宣傳企劃。"
+        },
+        {
           "id": "w116",
           "en": "consumed — Some samples from Logic may already be used or consumed during the cooperation.",
           "zh": "consumed /kənˈsuːmd/：已使用；已耗用。"
@@ -645,6 +650,7 @@ window.PRACTICE_DATA = {
     "proactive": "/proʊˈæktɪv/",
     "panel": "/ˈpænəl/",
     "capacity": "/kəˈpæsəti/",
+    "campaign": "/kæmˈpeɪn/",
     "preliminary": "/prɪˈlɪməneri/",
     "estimate": "/ˈestəmət/",
     "brick-and-mortar": "/ˌbrɪk ən ˈmɔːrtər/",
